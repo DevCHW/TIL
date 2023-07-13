@@ -237,3 +237,97 @@ Java에서는 필드가 원시 타입인 경우 final 키워드를 사용해 불
 </div>
 </details>
 <!-- end of question 11 -->
+
+
+<!-- question 12 -->
+<details>
+<summary>싱글톤 패턴의 대표적인 예시</summary>
+<div>
+
+```
+싱글톤 패턴의 대표적인 예시는 Spring Bean 입니다.
+스프링의 빈 등록 방식은 기본적으로 싱글톤 스코프이고, 스프링 컨테이너는 모든 빈들을 싱글톤으로 관리합니다.  
+(요청할 때마다 새로운 객체를 생성해서 반환하는 기능도 제공합니다.(프로토타입 빈, @Scope("prototype)))  
+```
+</div>
+</details>
+<!-- end of question 12 -->
+
+
+<!-- question 13 -->
+<details>
+<summary>가비지 컬렉션(Garbage Collection)에 대해 설명해주세요.</summary>
+<div>
+
+```
+가비지 컬렉션은 JVM의 메모리 관리 기법중 하나로 시스템에서 동적으로 할당됐던 메모리 영역 중에서 필요없어진 메모리 영역을 회수하여 메모리를 관리해주는 기법입니다.
+```
+</div>
+</details>
+<!-- end of question 13 -->
+
+
+<!-- question 14 -->
+<details>
+<summary>가비지 컬렉션의 과정에 대해 설명해주세요.</summary>
+<div>
+
+```
+GC의 작업을 수행하기 위해 JVM이 어플리케이션의 실행을 잠시 멈추고, GC를 실행하는 쓰레드를 제외한 모든 쓰레드들의 작업을 중단 후(Stop The World 과정) 사용하지 않는 메모리를 제거(Mark and Sweep 과정)하고 작업이 재개됩니다.  
+
+++ GC의 작업은 Young 영역에 대한 Minor GC와 Old 영역에 대한 Major GC로 구분됩니다.
+```
+</div>
+</details>
+<!-- end of question 14 -->
+
+
+<!-- question 15 -->
+<details>
+<summary>객체지향의 설계원칙</summary>
+<div>
+
+```
+객체지향의 설계 원칙은 SRP, OCP, LSP, ISP, DIP (SOLID)가 있고 각각 다음과 같습니다.
+
+1. SRP - 단일 책임 원칙 : 한 클래스는 하나의 책임만 가져야 한다.
+2. OCP - 개방-폐쇄 원칙 : 확장에는 열려있고, 수정에는 닫혀있어야 한다.
+3. LSP - 리스코프 치환 원칙 : 상위 타입은 항상 하위 타입으로 대체할 수 있어야 한다.
+4. ISP - 인터페이스 분리 원칙 : 인터페이스 내에 메소드는 최소한 일수록 좋다.(하나의 일반적인 인터페이스보다, 여러개의 구체적인 인터페이스가 낫다.)
+SRP와 같은 문제에 대한 두 가지 다른 해결책이다.
+5. DIP - 의존관계 역전 원칙 : 구체적인 클래스보다 상위 클래스, 인터페이스, 추상 클래스와 같이 변하지 않을 가능성이 높은 클래스와 관계를 맺어라. DIP 원칙을 따르는 가장 인기 있는 방법은 의존성 주입이다.(DI)
+```
+</div>
+</details>
+<!-- end of question 15 -->
+
+<!-- question 16 -->
+<details>
+<summary>자바의 메모리 영역에 대해 설명해주세요.</summary>
+<div>
+
+```
+자바의 메모리 공간은 크게 Method 영역, Stack 영역, Heap 영역으로 구분되고, 데이터 타입에 따라 할당됩니다.
+
+- Method 영역 : 전역변수와 static 변수를 저장하며, Method 영역은 프로그램의 시작부터 종료까지 메모리에 남아있습니다.
+
+- Stack 영역 : 지역변수와 매개변수 데이터 값이 저장되는 공간이며, 메소드가 호출될 때 메모리에 할당되고 종료되면 메모리가 해제됩니다. LIFO(Lasst In First Out) 구조를 갖고 변수에 새로운 데이터가 할당되면 이전 데이터는 지워집니다.
+
+- Heap 영역 : new 키워드로 생성되는 객체(인스턴스), 배열 등이 Heap 영역에 저장되며, 가비지 컬렉션에 의해 메모리가 관리되어집니다.
+```
+</div>
+</details>
+<!-- end of question 16 -->
+
+
+<!-- question 17 -->
+<details>
+<summary>각 메모리 영역이 할당되는 시점은 언제인가요?</summary>
+<div>
+
+```
+```
+</div>
+</details>
+<!-- end of question 17 -->
+
