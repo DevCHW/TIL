@@ -81,7 +81,7 @@ Spring security에서 CORS 설정하는 법은 Spring MVC에서 설정하는것�
 
 Spring security를 적용하셨다면 보통 다음의 SecurityConfig 클래스를 설정할 것입니다.
 
-```
+``` java
 package com.example.springcors.security;
 
 import org.springframework.context.annotation.Bean;
@@ -102,7 +102,7 @@ public class SecurityConfig {
 
 위의 SecurityConfig 클래스에 `SecurityFilterChain`을 반환하는 메소드를 빈으로 등록하여 다음의 cors()메소드를 추가해주시면 됩니다.
 
-```
+``` java
 @Bean
 public SecurityFilterChain securityFilerChain(HttpSecurity http) throws Exception {
     http.cors();    //CORS 설정
